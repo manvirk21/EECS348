@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>CSS Font Control</title>
+        <style>
+                body {
+                        font-family: Arial, sans-serif;
+                        background-color: #f2f2f2;
+                }
+                .container {
+                        margin: 50px auto;
+                        max-width: 600px;
+                        padding: 20px;
+                        background-color: #fff;
+                        border: 1px solid #ccc;
+                        border-radius: 10px;
+                        box-shadow: 0px 0px 10px #999;
+                }
+                p {
+                        font-size: 20px;
+                        line-height: 1.5;
+                        margin-bottom: 20px;
+                        padding: 10px;
+                        border: 2px solid #333;
+                        width: 80%;
+                        color: #333;
+                }
+                input[type="text"] {
+                        margin-right: 10px;
+                        padding: 5px;
+                        border: 1px solid #ccc;
+                        border-radius: 3px;
+                        width: 80px;
+                }
+                input[type="submit"] {
+                        padding: 5px 10px;
+                        background-color: #006699;
+                        color: #fff;
+                        border: none;
+                        border-radius: 3px;
+                        cursor: pointer;
+                }
+        </style>
+</head>
+<body>
+        <div class="container">
+                <p id="my-paragraph">Rickrolling or a Rickroll is an internet meme involving the unexpected appearance of the music video for the 1987 song "Never Gonna Give You Up", performed by 
+English singer Rick Astley. The aforementioned video has over 1 billion views on YouTube. The meme is a type of bait and switch, usually using a disguised hyperlink that leads to the music video. 
+When victims click on a seemingly unrelated link, the site with the music video loads instead of what was expected, and they have been "Rickrolled".>
+                <label for="font-color">Font Color:</label>
+                <input type="text" id="font-color" name="font-color" placeholder="RGB">
+                <label for="border-color">Border Color:</label>
+                <input type="text" id="border-color" name="border-color" placeholder="RGB">
+                <label for="border-width">Border Width:</label>
+                <input type="text" id="border-width" name="border-width" placeholder="px">
+                <input type="submit" value="Apply" onclick="applyStyles()">
+        </div>
+        <script>
+                function applyStyles() {
+                        var paragraph = document.getElementById("my-paragraph");
+                        var fontColor = document.getElementById("font-color").value;
+                        var borderColor = document.getElementById("border-color").value;
+                        var borderWidth = document.getElementById("border-width").value;
+                        paragraph.style.color = "rgb(" + fontColor + ")";
+                        paragraph.style.borderColor = "rgb(" + borderColor + ")";
+                        paragraph.style.borderWidth = borderWidth + "px";
+                }
+        </script>
+</body>
+</html>
+
+
